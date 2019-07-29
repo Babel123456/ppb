@@ -94,7 +94,7 @@
                 -->
 				
 				<div class="profile_img_wrap">
-				  <img class="profile_img" src="https://ppb.sharemomo.com/static_file/pinpinbox/zh_TW/images/login.png">
+				  <img class="profile_img" src="https://cdn.pinpinbox.com/storage/zh_TW/user/12681/picture$19ca.jpg">
 			    </div>
 				
 			  </a>
@@ -214,8 +214,12 @@
   <script type="text/javascript" src="https://cdn.pinpinbox.com/static_file/pinpinbox/zh_TW/js/jquery-timeago-master/js/jquery.timeago.zh-TW.js"></script>
 
   <!-- 大版瀑布流 -->
+  <!-- //20190725 由於要直向排列, 移除瀑布流開始 -->
+  <!--
   <script type="text/javascript" src="https://cdn.pinpinbox.com/static_file/pinpinbox/zh_TW/js/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="https://cdn.pinpinbox.com/static_file/pinpinbox/zh_TW/js/masonry/js/masonry.pkgd.min.js"></script>
+  -->
+  <!-- //20190725 由於要直向排列, 移除瀑布流結束 -->
   
   <!-- POPUP開啟作品資訊頁 -->
   <script type="text/javascript" src="https://ppb.sharemomo.com/static_file/pinpinbox/zh_TW/js/jquery-textcomplete/jquery.textcomplete.js"></script>
@@ -359,38 +363,7 @@
 				<!-- 第二個作品結束 -->
 				
 				
-				<!-- 第三個作品開始 -->
-				<div class="page">
-				  <div id="recommend_works_item03" class="recommend_works_item" onclick="popview('http://localhost/creative_content.php');">
-				    <div class="recommend_creative_wrap">
-					  <div class="recommend_creative_info">
-					    <div class="recommend_creative_info_wrap">
-					      <div class="recommend_creative_title">與鯨鯊ㄧ起吃早餐與鯨鯊ㄧ起吃午餐與鯨鯊ㄧ起吃晚餐</div>
-					      <div class="recommend_creative_name">
-						    <a href="https://www.pinpinbox.com/index/creative/content/?user_id=4630">
-							  <div class="recommend_creative_name_wrap">
-						        <span>Eric Chang</span>
-						        <span><i class="fa fa-arrow-right"></i></span>
-						      </div>
-							</a>
-						  </div>
-						</div>
-					  </div>
-					  <div class="recommend_creative_icon"><i class="fa fa-play-circle"></i><i class="fa fa-volume-down"></i></div>
-					</div>
-					<div class="recommend_works_wrap">
-					  <div class="recommend_works_photo"><img src="https://cdn.pinpinbox.com/upload/pinpinbox/diy/20171213/5a300fa638464.jpg"></div>
-					  <div class="recommend_works_desc">
-						<div class="profile_img_wrap">
-			              <a href="https://www.pinpinbox.com/index/creative/content/?user_id=4630" title="Eric Chang" ><img class="profile_img" src="https://cdn.pinpinbox.com/storage/zh_TW/user/4630/picture$8dff.jpg"></a>
-						</div>
-						<div class="recommend_works_title">與鯨鯊ㄧ起吃早餐</div>
-						<div class="recommend_works_view">瀏覽 : 9</div>
-					  </div>
-					</div>
-				  </div><!-- .recommend_works_item -->
-		        </div><!-- .page -->
-				<!-- 第三個作品結束 -->
+				
 				
 				<!-- 第四個作品開始 -->
 				<div class="page">
@@ -457,7 +430,41 @@
 				  </div><!-- .recommend_works_item -->
 		        </div><!-- .page -->
 				<!-- 第五個作品結束 -->
-		        
+				
+				
+				<!-- 第三個作品開始 -->
+				<div class="page">
+				  <div id="recommend_works_item03" class="recommend_works_item" onclick="popview('http://localhost/creative_content.php');">
+				    <div class="recommend_creative_wrap">
+					  <div class="recommend_creative_info">
+					    <div class="recommend_creative_info_wrap">
+					      <div class="recommend_creative_title">與鯨鯊ㄧ起吃早餐與鯨鯊ㄧ起吃午餐與鯨鯊ㄧ起吃晚餐</div>
+					      <div class="recommend_creative_name">
+						    <a href="https://www.pinpinbox.com/index/creative/content/?user_id=4630">
+							  <div class="recommend_creative_name_wrap">
+						        <span>Eric Chang</span>
+						        <span><i class="fa fa-arrow-right"></i></span>
+						      </div>
+							</a>
+						  </div>
+						</div>
+					  </div>
+					  <div class="recommend_creative_icon"><i class="fa fa-play-circle"></i><i class="fa fa-volume-down"></i></div>
+					</div>
+					<div class="recommend_works_wrap">
+					  <div class="recommend_works_photo"><img src="https://cdn.pinpinbox.com/upload/pinpinbox/diy/20190626/5d12cce2dace6.jpg"></div>
+					  <div class="recommend_works_desc">
+						<div class="profile_img_wrap">
+			              <a href="https://www.pinpinbox.com/index/creative/content/?user_id=4630" title="Eric Chang" ><img class="profile_img" src="https://cdn.pinpinbox.com/storage/zh_TW/user/4630/picture$8dff.jpg"></a>
+						</div>
+						<div class="recommend_works_title">與鯨鯊ㄧ起吃早餐</div>
+						<div class="recommend_works_view">瀏覽 : 9</div>
+					  </div>
+					</div>
+				  </div><!-- .recommend_works_item -->
+		        </div><!-- .page -->
+				<!-- 第三個作品結束 -->
+						        			
 		      </div><!-- .recommend_works_carousel -->
 		      
 			</div><!-- .recommend_content_works -->
@@ -804,6 +811,14 @@ function addhover(){
 function recommand_js(){
   if($('.recommend_works_carousel').length>0){
 	if( window.innerWidth > 768){
+	  //20190725 由於要直向排列, 移除瀑布流
+	  //移除小版OWL CAROUSEL CLASS
+	  if($('.recommend_works_carousel').hasClass('owl-carousel')){
+	    $('.recommend_works_carousel').removeClass('owl-carousel');
+	    $(".recommend_works_carousel").trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+         $(".recommend_works_carousel").find('.owl-stage-outer').children().unwrap();
+	  }
+	  /*
 	  //大版瀑布流
 	  var $container = $('.recommend_works_carousel');
       $container.imagesLoaded(function () {
@@ -814,6 +829,8 @@ function recommand_js(){
         });
         $('div.page').animate({opacity: 1});
       });
+	  
+	  
 	  //移除小版OWL CAROUSEL CLASS
 	  if($('.recommend_works_carousel').hasClass('owl-carousel')){
 	    $('.recommend_works_carousel').removeClass('owl-carousel');
@@ -828,20 +845,24 @@ function recommand_js(){
 	  //var random_margintop = margintop_range([1,2,3,4], 4);
 	  var random_margintop = [1,2,3];
 	  
-	  
-	  $('.recommend_works_carousel').masonry({ columnWidth: '.page', animate: true });
+	  console.log('random_margintop.length='+random_margintop.length);
+	  //$('.recommend_works_carousel').masonry({ columnWidth: '.page', animate: true });
 	  for(i=0;i<$('.recommend_works_carousel .page').length;i++){
 	    //找出第一排
+		console.log('i='+i);
 	    if($('.recommend_works_carousel .page:nth-child('+(i+1)+')').position().top===0){
 	      //加上不齊頭高度
 	      $('.recommend_works_carousel .page:nth-child('+(i+1)+')').addClass('margin_top'+random_margintop[i]);
+		  console.log('margin_top'+random_margintop[i]);
 	    }
 	  }
+	 */
 	}else{
 	  //小版輪播	  
 	  //20190719 先偵測是否已有瀑布流, 再移除
 	  //$('.recommend_works_carousel').masonry('destroy');
-	  if($('.recommend_works_carousel').data('masonry')?true:false){$('.recommend_works_carousel').masonry('destroy');};
+	  //20190725 由於要直向排列, 移除瀑布流
+	  //if($('.recommend_works_carousel').data('masonry')?true:false){$('.recommend_works_carousel').masonry('destroy');};
 	  
 	   var carousel_Settings = {
 	    items:2,
